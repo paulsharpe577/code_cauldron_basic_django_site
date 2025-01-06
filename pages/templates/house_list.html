@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House List</title>
+</head>
+<body>
+    <h1>List of Houses</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Address</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for house in houses %}
+            <tr>
+                <td>{{ house.id }}</td>
+                <td>{{ house.address }}</td>
+                <td>{{ house.price }}</td>
+                <td>{{ house.description }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
