@@ -3,8 +3,10 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<div class="jumbotron mt-4">
+{% load static %}
+<div class="jumbotron mt-4 text-center">
     <h1 class="display-4">Welcome to My Site!</h1>
+    <img src="{% static 'images/001.jpeg' %}" alt="Example Image" class="img-fluid w-50 mx-auto d-block">
     <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
     <hr class="my-4">
     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>

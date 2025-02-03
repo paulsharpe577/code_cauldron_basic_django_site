@@ -8,6 +8,7 @@ from .models import House
 
 def house_list(request):
     houses = House.objects.all()
-    return render(request, 'pages/house_list.html', {'houses': houses})
+    total_price = sum(house.price for house in houses)
+    return render(request, 'pages/house_list.html', {'houses': houses, 'total_price': total_price})
 
 
